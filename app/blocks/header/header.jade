@@ -1,0 +1,38 @@
+include ../container/container
+include ../nav/nav
+include ../breadcrumbs/breadcrumbs
+
+mixin header()
+	-const nav = ['ВИДЖЕТЫ', 'ПРИМЕРЫ', 'ЦЕНЫ', 'ОТЗЫВЫ', 'F.A.Q.', 'КАК СОЗДАТЬ?']
+	+b('header').header
+		+container()
+			+e.top
+				+e.logo ЛОГОТИП
+				+nav(nav)
+				+e.user
+					+e('span').user-name Александр Констатинопольский
+					+e('img').user-icon(src='assets/images/user-icon.png' alt='user-icon')
+					+e('button').user-quit
+						img(src='assets/images/user-quit.png' alt='user-quit')
+		+e.actions-line
+			+container()
+				button.new-cover создать новую обложку
+				+e('ul').actions
+					li
+						+e('a').actions-link(href='#') Мои группы
+							span 15
+					li
+						+e('a').actions-link(href='#') Мои обложки
+							span 999
+					li
+						+e('a').actions-link(href='#') Мой тариф
+				button.receive-btn получать уведомления
+		+container()
+			+breadcrumbs()
+				+e('ul').list
+					li
+						+e('a').elem(href='#') Главная
+					li
+						+e('a').elem(href='#') Мой аккаунт
+					li
+						+e('a').elem(href='#') Создание новой обложки

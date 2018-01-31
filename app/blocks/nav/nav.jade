@@ -1,0 +1,4 @@
+mixin nav(arr)
+	+b('nav').nav&attributes(attributes)
+		each item in arr
+			+e('a').item(href='#') #{item}

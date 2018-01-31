@@ -1,0 +1,39 @@
+include ../title/title
+include ../yellow-btn/yellow-btn
+
+mixin sidebar()
+	+b('aside').sidebar
+		+title('Предварительные настройки')
+		+e.row
+			select.select
+				option(hidden) Выберите группу
+				option qwerty1
+				option qwerty2
+				option qwerty3
+				option qwerty4
+			+yellow-btn('ЗАГРУЗИТЬ ФОН')
+		+e.row
+			select.select
+				option(hidden) Обновление обложки через 15 минут
+				option qwerty1
+				option qwerty2
+				option qwerty3
+				option qwerty4
+		+b.widgets
+			+e('h2').title Список всех виджетов
+			+e('ul').list
+				+e('li').item
+					img(src='' alt='sidebar-img')
+					span Изображение на обложке
+				+e('li').item
+					img(src='' alt='sidebar-img')
+					span Изображение на обложке
+				+e('li').item
+					img(src='' alt='sidebar-img')
+					span Изображение на обложке
+				+e('li').item
+					img(src='' alt='sidebar-img')
+					span Изображение на обложке
+				+e('li').item
+					img(src='' alt='sidebar-img')
+					span Изображение на обложке
