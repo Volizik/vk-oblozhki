@@ -1,9 +1,21 @@
 .nav
 	display flex
 	&__item
+		position relative
 		margin-right 15px
 		font-size 16px
 		font-weight 700
 		text-transform uppercase
 		white-space nowrap
 		color #fff
+		&:hover&:before
+			width 100%
+		&:before
+			position absolute
+			left 0
+			overflow hidden
+			width 0
+			content attr(data-style)
+			text-transform uppercase
+			color #ffb000
+			transition .3s
