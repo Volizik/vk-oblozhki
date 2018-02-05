@@ -1,3 +1,8 @@
+include ../workspace/workspace
+include ../settings/settings
+
+
 mixin main()
 	+b('main').main
-		block
+		+workspace()
+		+settings()

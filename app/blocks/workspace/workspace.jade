@@ -1,0 +1,19 @@
+include ../title/title
+include ../yellow-btn/yellow-btn
+
+mixin workspace()
+	+b.workspace
+		+title('Рабочая область')
+		+e('p').subtitle
+			| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+		+e.board
+		+e.block
+			+e('img').block-img(src='' alt='thumb')
+			+e.block-text
+				+e('h3').block-title Изображение на обложке
+				+e('p').block-desc Рисует любую картинку на обложке. Можно выбрать наши стандартные картинки, либо вставить ссылку на свою картинку. Отлично подходит для стикеров, смайкиков и тд. Чтобы нарисовать картинку поверх аватарки, просто добавьте виджет последним. Все виджеты рисуются в том порядке, в котором вы их добавили
+		+e.action
+			+yellow-btn('СОХРАНИТЬ')
+			+yellow-btn('ПРЕДПРОСМОТР')
+			+e('a').action-link(href='#') Бесплатный доступ на 48 часов
+

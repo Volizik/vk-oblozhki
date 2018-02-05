@@ -1,0 +1,67 @@
+include ../switch/switch
+include ../yellow-btn/yellow-btn
+
+mixin settings()
+	+b.settings
+		+e('ul').tabs
+			li
+				+e('a').tab(href='#') Слои конструктора
+		+e.body
+			+e('section').section
+				+e('span').span Закрепить:
+				+e.block
+					+e.col1
+						+e.switch
+							+switch()
+					+e.col2
+						+e('h3').title Случайные изображения
+							+e('span').arrow
+						+e.col2-body
+							+e.col2-row
+								+e('label').label
+									+e.label-text Координаты X
+									+e('input').input
+								+e('label').label
+									+e.label-text Координаты Y
+									+e('input').input
+							+e.col2-row
+								+e('label').label
+									+e.label-text Ширина
+									+e('input').input
+								+e('label').label
+									+e.label-text Высота
+									+e('input').input
+							+e.col2-row
+								+e('label').label
+									+e.label-text Картинка по ссылке
+									+e('input').input
+							+yellow-btn('ЗАГРУЗИТЬ КАРТИНКУ')
+							+e('h3').subtitle Стандартный набор картинок
+							+e('ul').imags-list
+								li
+									img(src='assets/images/emoji.png' alt='emoji')
+								li
+									img(src='assets/images/emoji.png' alt='emoji')
+								li
+									img(src='assets/images/emoji.png' alt='emoji')
+								li
+									img(src='assets/images/emoji.png' alt='emoji')
+				+e.block
+					+e.col1
+						+e.switch
+							+switch()
+					+e.col2
+						+e('h3').title Курс валют
+							+e('span').arrow
+						+e.col2-body
+				+e.block
+					+e.col1
+						+e.switch
+							+switch()
+					+e.col2
+						+e('h3').title Самый активный подписчик
+							+e('span').arrow
+						+e.col2-body
+							+e.col2-row
+
+

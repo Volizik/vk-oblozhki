@@ -1,3 +1,5 @@
 mixin switch()
-	+b.switch&attributes(attributes)
-		block
+	+b('label').switch
+		+e('input').input(type='checkbox')
+		+e('div').bg
+		+e('span').slider
