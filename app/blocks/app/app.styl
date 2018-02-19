@@ -1,7 +1,14 @@
 .app
 	display grid
-	grid-template-columns 370px 1fr
+	grid-template-columns 1fr 830px 1fr
 	grid-template-rows auto 1fr
-	grid-template-areas 'header header' 'sidebar main'
+	grid-template-areas 'header header header' 'sidebar main settings'
 	min-height 100vh
-	background-color c_black
+	+below(1360px)
+		grid-template-columns 2fr 1fr
+		grid-template-rows auto auto 1fr
+		grid-template-areas 'header header' 'sidebar sidebar' 'main settings'
+	+below(1140px)
+		grid-template-columns 1fr
+		grid-template-rows auto auto 1fr auto
+		grid-template-areas 'header' 'sidebar' 'main' 'settings'

@@ -4,6 +4,9 @@
 	grid-area sidebar
 	background-color #fff
 	border-right 1px solid #17181c
+	+below(1360px)
+		border-right none
+		border-bottom 5px solid #17181c
 	&__row
 		margin-bottom 10px
 		display flex
@@ -29,6 +32,9 @@
 		&__list
 			display flex
 			flex-direction column
+			+below(1360px)
+				flex-direction row
+				flex-wrap wrap
 		&__item
 			margin-bottom 10px
 			display flex
@@ -36,6 +42,15 @@
 			height 46px
 			font-size 14px
 			font-weight 700
+			+below(1360px)
+				margin-x(10px)
+				flex-direction column
+				justify-content center
+				width 120px
+				height auto
 			img
 				margin-right 20px
 				size(50px)
+				+below(1360px)
+					margin-right 0
+					size(120px)

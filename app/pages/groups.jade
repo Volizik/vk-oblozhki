@@ -1,0 +1,13 @@
+extends ../blocks/layout-default/layout-default
+include ../blocks/header/header
+include ../blocks/groups/groups
+
+block head
+    - var pageTitle = 'Project Template';
+    - var pageDescription = '';
+    - var pageKeywords = '';
+
+block content
+    +header()
+    +groups()
+
