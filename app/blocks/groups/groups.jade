@@ -1,0 +1,34 @@
+include ../container/container
+include ../title/title
+include ../yellow-btn/yellow-btn
+
+mixin groups()
+	+b.groups
+		+container()
+			+title('Администрируемые сообщества')
+			+e.table
+				+e.thead
+					+e.th
+						+e('span').th-text Статус сообщества
+					+e.th
+						+e('span').th-text Ссылка группы
+					+e.th
+						+e('span').th-text Название группы
+				+e.tr
+					+e.td
+						+e('img').td-img(src='assets/images/group-logo.png')
+						+e('span').td-text Сообщество не подключено
+						+yellow-btn('ДОБАВИТЬ')
+					+e.td
+						+e('span').td-text vk.com/web_craft_group
+					+e.td
+						+e('span').td-text CRAFT GROUP
+				+e.tr
+					+e.td
+						+e('img').td-img(src='assets/images/group-logo.png')
+						+e('span').td-text Активное сообщество
+						+yellow-btn('ОБЛОЖКА')
+					+e.td
+						+e('span').td-text vk.com/web_craft_group
+					+e.td
+						+e('span').td-text CRAFT GROUP
